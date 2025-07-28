@@ -217,7 +217,7 @@ const Projects: React.FC = () => {
                 </div>
 
                 <div className="flex space-x-3">
-                  {project.liveUrl && (
+                  {project.liveUrl && project.liveUrl !== '#' && (
                     <motion.a
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
@@ -339,7 +339,7 @@ const Projects: React.FC = () => {
                         </div>
 
                         <div className="flex space-x-4">
-                          {project.liveUrl && (
+                          {project.liveUrl && project.liveUrl !== '#' && (
                             <motion.a
                               whileHover={{ scale: 1.05 }}
                               whileTap={{ scale: 0.95 }}

@@ -19,10 +19,13 @@ function App() {
       const idx = sectionOrder.indexOf(activeSection);
       if (e.detail.direction === 'down' && idx < sectionOrder.length - 1) {
         setActiveSection(sectionOrder[idx + 1]);
+        window.scrollTo(0, 0);
       } else if (e.detail.direction === 'up' && idx > 0) {
         setActiveSection(sectionOrder[idx - 1]);
+        window.scrollTo(0, 0);
       } else if (e.detail.direction === 'goto' && e.detail.section && sectionOrder.includes(e.detail.section)) {
         setActiveSection(e.detail.section);
+        window.scrollTo(0, 0);
       }
     };
     window.addEventListener('navigateSection', handler as EventListener);
@@ -41,7 +44,7 @@ function App() {
     <ThemeProvider>
       <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
         <Header activeSection={activeSection} setActiveSection={setActiveSection} />
-        <section className="min-h-screen">
+        <section className="min-h-screen pt-10">
           {sectionComponents[activeSection] || <Home />}
         </section>
       </div>

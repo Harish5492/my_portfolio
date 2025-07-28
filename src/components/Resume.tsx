@@ -6,7 +6,7 @@ const Resume: React.FC = () => {
   const handleDownload = () => {
     // Create a link to download the resume
     const link = document.createElement('a');
-    link.href = '/Harish Rana - Resume.pdf';
+    link.href = '/Harish Rana-Resume.pdf';
     link.download = 'Harish_Rana_Resume.pdf';
     document.body.appendChild(link);
     link.click();

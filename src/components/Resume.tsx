@@ -1,13 +1,21 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Download, FileText, Award, Briefcase, GraduationCap, Code, ChevronDown, ChevronUp } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Download,
+  Award,
+  Briefcase,
+  GraduationCap,
+  Code,
+  ChevronDown,
+  ChevronUp,
+} from "lucide-react";
 
 const Resume: React.FC = () => {
   const handleDownload = () => {
     // Create a link to download the resume
-    const link = document.createElement('a');
-    link.href = '/Harish Rana-Resume.pdf';
-    link.download = 'Harish_Rana_Resume.pdf';
+    const link = document.createElement("a");
+    link.href = "/Harish Rana-Resume.pdf";
+    link.download = "Harish_Rana_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -15,38 +23,39 @@ const Resume: React.FC = () => {
 
   const experience = [
     {
-      title: 'MERN Stack & Blockchain Developer',
-      company: 'Antier Solutions Pvt. Ltd.',
-      period: 'Jan 2024 – Present',
-      description: 'Driving development of scalable crypto wallets and DeFi platforms across multiple blockchain networks.',
+      title: "Full-Stack & Blockchain Developer",
+      company: "Antier Solutions Pvt. Ltd.",
+      period: "Jan 2024 – Present",
+      description:
+        "Leading the development of high-performance microservices and secure blockchain architectures for enterprise-grade DeFi and non-custodial wallet solutions.",
       achievements: [
-        'Architected and deployed Plus Wallet (4.8★ on App Store) with dynamic NFT & transaction modules.',
-        'Engineered cross-chain systems handling 50K+ wallets & 10M+ transactions using BullMQ & Token Bucket Algorithm.',
-        'Led full-stack development of Note Wallet with secure RBAC, smart contract factory, and real-time profit models.',
-        'Enhanced security in Miracle Wallet by addressing CertiK audit points and implementing App Lock PIN logic.',
-        'Built MPC Vendor Wallet with post-trial monetization, usage tracking, and grace period logic.',
-        'Mentored junior devs, conducted code reviews, and optimized APIs for performance and maintainability.'
-      ]
-    }
+        "Architected and Scaled Plus Wallet: Spearheaded the deployment of a 4.8★ rated multi-chain crypto wallet, implementing high-concurrency NFT modules and real-time transaction tracking.",
+        "Engineered High-Throughput Systems: Optimized infrastructure to support 50k+ wallets and 10M+ transactions using BullMQ orchestration and Token Bucket rate-limiting for seamless RPC management.",
+        "Designed Solos Finance Microservices: Built a resilient DeFi ecosystem with 8+ specialized services, leveraging gRPC for low-latency communication and Kafka for event-driven reliability.",
+        "Security & Compliance Hardening: Remediated critical CertiK audit vulnerabilities and implemented hardened security features including App Lock backoff logic and Ethers.js signature validation.",
+        "Innovative Smart Contract Factories: Developed secure Contract Factories for Note Wallet, enabling automated role-based access control and algorithmic profit-sharing models.",
+        "Monetization & B2B Infrastructure: Engineered an MPC Vendor platform with dynamic usage tracking, automated monetization logic, and scalable vendor onboarding workflows.",
+        "Technical Leadership: Mentored a team of junior developers while standardizing API design patterns and code review processes to ensure 99.9% system uptime and maintainability.",
+      ],
+    },
   ];
-
 
   const education = [
     {
-      degree: 'Bachelor of Technology in Computer Science',
-      institution: 'Chandigarh Group of Colleges Mohali, Punjab - India',
-      period: '2016 - 2020',
-      grade: 'CGPA: 6.96/10'
-    }
+      degree: "Bachelor of Technology in Computer Science",
+      institution: "Chandigarh Group of Colleges Mohali, Punjab - India",
+      period: "2016 - 2020",
+      grade: "CGPA: 6.96/10",
+    },
   ];
 
   const certifications = [
-    'AWS Certified Solutions Architect',
-    'Certified Ethereum Developer',
-    'MongoDB Certified Developer',
-    'Blockchain Certified Developer',
-    'Mern Stack Certified Developer',
-    'Google Cloud Professional Developer'
+    "AWS Certified Solutions Architect",
+    "Certified Ethereum Developer",
+    "MongoDB Certified Developer",
+    "Blockchain Certified Developer",
+    "Mern Stack Certified Developer",
+    "Google Cloud Professional Developer",
   ];
 
   return (
@@ -63,11 +72,15 @@ const Resume: React.FC = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-            Download my complete resume or explore my professional journey below.
+            Download my complete resume or explore my professional journey
+            below.
           </p>
-          
+
           <motion.button
-            whileHover={{ scale: 1.05, boxShadow: '0 10px 25px rgba(59, 130, 246, 0.3)' }}
+            whileHover={{
+              scale: 1.05,
+              boxShadow: "0 10px 25px rgba(59, 130, 246, 0.3)",
+            }}
             whileTap={{ scale: 0.95 }}
             onClick={handleDownload}
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
@@ -88,7 +101,7 @@ const Resume: React.FC = () => {
             <Briefcase className="w-8 h-8 mr-3 text-blue-600" />
             Professional Experience
           </h3>
-          
+
           <div className="space-y-8">
             {experience.map((exp, index) => (
               <motion.div
@@ -111,16 +124,18 @@ const Resume: React.FC = () => {
                     {exp.period}
                   </span>
                 </div>
-                
+
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   {exp.description}
                 </p>
-                
+
                 <ul className="space-y-2">
                   {exp.achievements.map((achievement, achIndex) => (
                     <li key={achIndex} className="flex items-start">
                       <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                      <span className="text-gray-600 dark:text-gray-300">{achievement}</span>
+                      <span className="text-gray-600 dark:text-gray-300">
+                        {achievement}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -140,7 +155,7 @@ const Resume: React.FC = () => {
             <GraduationCap className="w-8 h-8 mr-3 text-green-600" />
             Education
           </h3>
-          
+
           {education.map((edu, index) => (
             <motion.div
               key={index}
@@ -160,9 +175,7 @@ const Resume: React.FC = () => {
               <p className="text-blue-600 dark:text-blue-400 font-medium mb-2">
                 {edu.institution}
               </p>
-              <p className="text-gray-600 dark:text-gray-300">
-                {edu.grade}
-              </p>
+              <p className="text-gray-600 dark:text-gray-300">{edu.grade}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -177,7 +190,7 @@ const Resume: React.FC = () => {
             <Award className="w-8 h-8 mr-3 text-yellow-600" />
             Certifications
           </h3>
-          
+
           <div className="grid md:grid-cols-2 gap-4">
             {certifications.map((cert, index) => (
               <motion.div
@@ -209,22 +222,28 @@ const Resume: React.FC = () => {
             <Code className="w-6 h-6 mr-3 text-purple-600" />
             Technical Expertise Summary
           </h3>
-          
+
           <div className="grid md:grid-cols-3 gap-6">
             <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Frontend</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-3">
+                Frontend
+              </h4>
               <p className="text-gray-600 dark:text-gray-300 text-sm">
                 React.js, Next.js, TypeScript, Tailwind CSS, Redux, React Native
               </p>
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Backend</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-3">
+                Backend
+              </h4>
               <p className="text-gray-600 dark:text-gray-300 text-sm">
                 Node.js, NestJS, Express.js, GraphQL, REST APIs, Microservices
               </p>
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Blockchain</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-3">
+                Blockchain
+              </h4>
               <p className="text-gray-600 dark:text-gray-300 text-sm">
                 Ethereum, Solidity, Web3.js, Smart Contracts, DeFi, MPC
               </p>
@@ -235,7 +254,9 @@ const Resume: React.FC = () => {
       <div className="fixed bottom-8 right-8 z-50 flex flex-col gap-4 items-end">
         <button
           onClick={() => {
-            const event = new CustomEvent('navigateSection', { detail: { direction: 'up' } });
+            const event = new CustomEvent("navigateSection", {
+              detail: { direction: "up" },
+            });
             window.dispatchEvent(event);
           }}
           className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-gray-700 dark:text-gray-300"
@@ -244,7 +265,9 @@ const Resume: React.FC = () => {
         </button>
         <button
           onClick={() => {
-            const event = new CustomEvent('navigateSection', { detail: { direction: 'down' } });
+            const event = new CustomEvent("navigateSection", {
+              detail: { direction: "down" },
+            });
             window.dispatchEvent(event);
           }}
           className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-gray-700 dark:text-gray-300"

@@ -1,45 +1,82 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Code, Database, Server, Smartphone, Shield, Cloud, ChevronDown, ChevronUp } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Code,
+  Database,
+  Server,
+  Smartphone,
+  Shield,
+  Cloud,
+  ChevronDown,
+  ChevronUp,
+} from "lucide-react";
 
 const About: React.FC = () => {
   const skills = [
     {
-      category: 'Frontend',
+      category: "Frontend",
       icon: <Code className="w-6 h-6" />,
-      technologies: ['React.js', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Redux'],
-      color: 'from-blue-500 to-cyan-500'
+      technologies: [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Redux",
+      ],
+      color: "from-blue-500 to-cyan-500",
     },
     {
-      category: 'Backend',
+      category: "Backend",
       icon: <Server className="w-6 h-6" />,
-      technologies: ['Node.js', 'NestJS','GoLang', 'Python', 'Express.js', 'GraphQL', 'REST APIs'],
-      color: 'from-green-500 to-emerald-500'
+      technologies: [
+        "Node.js",
+        "NestJS",
+        "GoLang",
+        "Python",
+        "Express.js",
+        "GraphQL",
+        "REST APIs",
+      ],
+      color: "from-green-500 to-emerald-500",
     },
     {
-      category: 'Database',
+      category: "Database",
       icon: <Database className="w-6 h-6" />,
-      technologies: ['MongoDB', 'PostgreSQL', 'Redis', 'MySQL', 'Prisma'],
-      color: 'from-purple-500 to-pink-500'
+      technologies: ["MongoDB", "PostgreSQL", "Redis", "MySQL", "Prisma"],
+      color: "from-purple-500 to-pink-500",
     },
     {
-      category: 'Mobile',
+      category: "Mobile",
       icon: <Smartphone className="w-6 h-6" />,
-      technologies: ['React Native', 'Flutter', 'iOS', 'Android', 'Expo'],
-      color: 'from-orange-500 to-red-500'
+      technologies: ["React Native"],
+      color: "from-orange-500 to-red-500",
     },
     {
-      category: 'Blockchain',
+      category: "Blockchain",
       icon: <Shield className="w-6 h-6" />,
-      technologies: ['Ethereum', 'Solidity', 'Web3.js', 'Smart Contracts', 'DeFi'],
-      color: 'from-yellow-500 to-orange-500'
+      technologies: [
+        "Ethereum",
+        "Solidity",
+        "Web3.js",
+        "Smart Contracts",
+        "DeFi",
+      ],
+      color: "from-yellow-500 to-orange-500",
     },
     {
-      category: 'DevOps',
+      category: "DevOps",
       icon: <Cloud className="w-6 h-6" />,
-      technologies: ['Docker', 'AWS', 'RabbitMQ', 'CI/CD', 'Kubernetes'],
-      color: 'from-indigo-500 to-purple-500'
-    }
+      technologies: [
+        "Docker",
+        "AWS",
+        "RabbitMQ",
+        "CI/CD",
+        "Kubernetes",
+        "BullMQ",
+        "Kafka",
+      ],
+      color: "from-indigo-500 to-purple-500",
+    },
   ];
 
   return (
@@ -91,24 +128,32 @@ const About: React.FC = () => {
               Full Stack Developer & Blockchain Enthusiast
             </h3>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              With over 2 years of experience in software development, I specialize in building 
-              robust web applications and innovative blockchain solutions. My passion lies in 
-              creating scalable, user-friendly applications that solve real-world problems.
+              With over 2 years of experience in software development, I
+              specialize in building robust web applications and innovative
+              blockchain solutions. My passion lies in creating scalable,
+              user-friendly applications that solve real-world problems.
             </p>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              I have successfully delivered multiple projects ranging from cryptocurrency wallets 
-              to enterprise-level web applications. My expertise spans across the entire development 
-              lifecycle, from conception to deployment and maintenance.
+              I have successfully delivered multiple projects ranging from
+              cryptocurrency wallets to enterprise-level web applications. My
+              expertise spans across the entire development lifecycle, from
+              conception to deployment and maintenance.
             </p>
             <div className="flex flex-wrap gap-4">
               <div className="bg-blue-100 dark:bg-blue-900/30 px-4 py-2 rounded-full">
-                <span className="text-blue-800 dark:text-blue-300 font-medium">2+ Years Experience</span>
+                <span className="text-blue-800 dark:text-blue-300 font-medium">
+                  2+ Years Experience
+                </span>
               </div>
               <div className="bg-green-100 dark:bg-green-900/30 px-4 py-2 rounded-full">
-                <span className="text-green-800 dark:text-green-300 font-medium">10+ Projects Delivered</span>
+                <span className="text-green-800 dark:text-green-300 font-medium">
+                  10+ Projects Delivered
+                </span>
               </div>
               <div className="bg-purple-100 dark:bg-purple-900/30 px-4 py-2 rounded-full">
-                <span className="text-purple-800 dark:text-purple-300 font-medium">Blockchain Expert</span>
+                <span className="text-purple-800 dark:text-purple-300 font-medium">
+                  Blockchain Expert
+                </span>
               </div>
             </div>
           </motion.div>
@@ -132,7 +177,9 @@ const About: React.FC = () => {
                 whileHover={{ y: -5, scale: 1.02 }}
                 className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                <div className={`w-12 h-12 bg-gradient-to-r ${skill.color} rounded-lg flex items-center justify-center text-white mb-4`}>
+                <div
+                  className={`w-12 h-12 bg-gradient-to-r ${skill.color} rounded-lg flex items-center justify-center text-white mb-4`}
+                >
                   {skill.icon}
                 </div>
                 <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
@@ -156,7 +203,9 @@ const About: React.FC = () => {
       <div className="fixed bottom-8 right-8 z-50 flex flex-col gap-4 items-end">
         <button
           onClick={() => {
-            const event = new CustomEvent('navigateSection', { detail: { direction: 'up' } });
+            const event = new CustomEvent("navigateSection", {
+              detail: { direction: "up" },
+            });
             window.dispatchEvent(event);
           }}
           className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-gray-700 dark:text-gray-300"
@@ -165,7 +214,9 @@ const About: React.FC = () => {
         </button>
         <button
           onClick={() => {
-            const event = new CustomEvent('navigateSection', { detail: { direction: 'down' } });
+            const event = new CustomEvent("navigateSection", {
+              detail: { direction: "down" },
+            });
             window.dispatchEvent(event);
           }}
           className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-gray-700 dark:text-gray-300"

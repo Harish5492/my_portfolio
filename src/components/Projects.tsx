@@ -448,6 +448,7 @@ const Projects: React.FC = () => {
                   const project = projects.find(
                     (p) => p.id === selectedProject,
                   );
+                  
                   if (!project) return null;
 
                   return (
